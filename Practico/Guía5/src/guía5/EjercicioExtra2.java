@@ -16,10 +16,12 @@ public class EjercicioExtra2 {
         int[] vector2 = new int[tamano];
         
         for (int i = 0; i < tamano; i++) {
-        vector1[i] = leer.nextInt(); //(int)(Math.random()*10);
-        vector2[i] = leer.nextInt();//(int)(Math.random()*10);
+        //vector1[i] = leer.nextInt(); 
+        //vector2[i] = leer.nextInt();
+        vector1[i] = (int)(Math.random()*10);
+        vector2[i] = (int)(Math.random()*10);
         }
-        
+        /*
         for (int i = 0; i < tamano; i++) {
             System.out.print(vector1[i]+" ");
         }
@@ -27,18 +29,22 @@ public class EjercicioExtra2 {
         for (int i = 0; i < tamano; i++) {
             System.out.print(vector2[i]+" ");
         }
+        */
         System.out.println("");
         int cont=0;
         for (int i = 0; i < tamano; i++) {
-            if (vector1[i]!=vector2[i]){
+            if (vector1[i]==vector2[i]){
                cont++;
+            } else {
+                cont--;
+            break;
             }
         }
-            if (cont>0){
-                System.out.println("Los vectores no son iguales");
-            }else{
-                System.out.println("Los vectores son iguales");
-            }
+        if (cont==tamano){
+            System.out.println("Los vectores son iguales");
+        } else {
+            System.out.println("Los vectores no son iguales");}
+        
     }
 }
 
